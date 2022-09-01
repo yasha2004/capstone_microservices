@@ -1,0 +1,21 @@
+resilience4j.circuitbreaker:
+    instances:
+        CustomerMS:           
+            failureRateThreshold: 50
+            ringBufferSizeInClosedState: 5
+            ringBufferSizeInHalfOpenState: 3
+            waitDurationInOpenState: 30s
+            automaticTransitionFromOpenToHalfOpenEnabled: true
+
+            
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-components: always
+      show-details: always
+      probes:
+        enabled: true

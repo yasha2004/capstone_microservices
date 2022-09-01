@@ -1,0 +1,9 @@
+server:
+ port: 9200
+
+spring:
+  application:
+    name: SimActivationGateway
+  cloud:
+    consul:
+      host: localhost
